@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <math.h>
+
+#define R 6350000 
+
+double distance_to_horizon(double height) {
+    return sqrt(2 * R * height + height * height);
+}
+
+int main() {
+    double height;
+
+    printf("Введите высоту над поверхностью Земли : ");
+    scanf("%lf", &height);
+
+    double distance = distance_to_horizon(height);
+    printf("Расстояние до линии горизонта: %.2f метровn", distance);
+
+    return 0;
+}
