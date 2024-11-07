@@ -1,0 +1,41 @@
+import math
+
+def triangle_properties(a, b, c):
+    
+    s = (a + b + c) / 2
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+
+    
+    semi_perimeter = s
+
+    
+    r = area / semi_perimeter
+
+    
+    R = (a * b * c) / (4 * area)
+
+    return area, r, R
+
+def equilateral_triangle_radius(a):
+ 
+    r_equilateral = (math.sqrt(3) / 6) * a
+    return r_equilateral
+
+
+a = float(input("Введите длину  a треугольника: "))
+b = float(input("Введите длину b треугольника: "))
+c = float(input("Введите длину c треугольника: "))
+
+
+if a + b > c and a + c > b and b + c > a:
+    area, r, R = triangle_properties(a, b, c)
+    print(f"Площадь треугольника: {area:.2f}")
+    print(f"Радиус вписанной окружности: {r:.2f}")
+    print(f"Радиус описанной окружности: {R:.2f}")
+else:
+    print("Такой треугольник не существует.")
+
+
+side_length = float(input("Введите длину стороны равностороннего треугольника: "))
+r_equilateral = equilateral_triangle_radius(side_length)
+print(f"Радиус вписанной окружности равностороннего треугольника: {r_equilateral:.2f}")
