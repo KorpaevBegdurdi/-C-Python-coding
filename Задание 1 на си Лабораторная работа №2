@@ -1,0 +1,18 @@
+#include <stdio.h>
+main(){
+	int a,b,c,d;
+	printf("Write down 1-st number a:");
+	scanf("%d", &a);
+	printf("Write down 2-nd number b:");
+	scanf("%d", &b);
+	printf("Write down 3-d number c:");
+	scanf("%d", &c);
+	printf("Write down 4-th number d:");
+	scanf("%d", &d);
+	if (b == a+a or b==a-a && c==b + a or c == a-b && d==c+a or d == c-a ){
+	printf(" True\n");}
+	 
+	else{
+		printf("False\n");
+	}
+}
