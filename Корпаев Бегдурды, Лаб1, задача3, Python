@@ -1,0 +1,30 @@
+import math
+
+def distance(x1, y1, x2, y2):
+    return math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+x1=int(input("Ввести кординат x1:    "))
+x2=int(input("Ввести кординат x2:    "))
+x3=int(input("Ввести кординат x3:    "))
+y1=int(input("Ввести кординат y1:    ")) 
+y2=int(input("Ввести кординат y2:    "))
+y3=int(input("Ввести кординат y3:    "))
+
+
+side1 = distance(x1, y1, x2, y2)
+side2 = distance(x2, y2, x3, y3)
+side3 = distance(x3, y3, x1, y1)
+
+perimeter = side1 + side2 + side3
+
+
+P = perimeter / 2
+
+
+S = math.sqrt(P * (P - side1) * (P - side2) * (P - side3))
+
+
+
+print("Периметр треугольника равен:", perimeter)
+print("Площадь треугольника равна:", S)
+
