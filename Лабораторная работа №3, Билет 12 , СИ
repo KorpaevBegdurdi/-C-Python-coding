@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+ getJapaneseYear(int year) {
+    int cycle = (year - 1) % 60;
+    int colorIndex = cycle % 5;
+    int animalIndex = cycle % 12;
+
+    
+    char* color;
+    if (colorIndex == 0) color = "зелёный";
+    else if (colorIndex == 1) color = "красный";
+    else if (colorIndex == 2) color = "жёлтый";
+    else if (colorIndex == 3) color = "белый";
+    else color = "чёрный";
+
+    
+    char* animal;
+    if (animalIndex == 0) animal = "крыса";
+    else if (animalIndex == 1) animal = "корова";
+    else if (animalIndex == 2) animal = "тигр";
+    else if (animalIndex == 3) animal = "заяц";
+    else if (animalIndex == 4) animal = "дракон";
+    else if (animalIndex == 5) animal = "змея";
+    else if (animalIndex == 6) animal = "лошадь";
+    else if (animalIndex == 7) animal = "овца";
+    else if (animalIndex == 8) animal = "обезьяна";
+    else if (animalIndex == 9) animal = "курица";
+    else if (animalIndex == 10) animal = "собака";
+    else animal = "свинья";
+    
+    printf("Год: %s %s\n", color, animal);
+}
+
+int main() {
+    int year;
+    printf("Введите год: ");
+    scanf("%d", &year);
+    
+    getJapaneseYear(year);
+    
+    return 0;
+}
+
+
+
+
+
