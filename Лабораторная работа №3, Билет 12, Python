@@ -1,0 +1,16 @@
+a="Валет"
+b="Дама"
+c="Король"
+d="Туз"
+print("Введите число карты:  ")
+A=int(input())
+if A == 11:
+    print(a, A)
+elif A==12:
+    print(b, A)
+elif A==13:
+    print(c, A)
+elif A==14:
+    print(d, A)
+else:
+    print("Введите число 10<A<15")
