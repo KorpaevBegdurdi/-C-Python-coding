@@ -1,0 +1,18 @@
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+
+
+m = int(input("Введите числитель (m): "))
+n = int(input("Введите знаменатель (n): "))
+
+
+gcd_value = gcd(m, n)
+
+
+m_simplified = m // gcd_value
+n_simplified = n // gcd_value
+
+
+print(f"Сокращенная дробь: {m_simplified}/{n_simplified}") 
