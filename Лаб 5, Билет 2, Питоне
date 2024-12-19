@@ -1,0 +1,16 @@
+n = int(input("Введите значение n: "))
+
+
+divisor = n
+
+
+divisors = []
+
+
+while divisor > 0:
+    if n % divisor == 0:  
+        divisors.append(divisor)  
+    divisor -= 1  
+
+
+print("Делители числа", n, "в порядке убывания:\n", divisors)
