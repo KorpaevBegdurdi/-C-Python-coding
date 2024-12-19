@@ -1,0 +1,23 @@
+import math
+
+
+x1 = float(input("Введите x1: "))
+y1 = float(input("Введите y1: "))
+x2 = float(input("Введите x2: "))
+y2 = float(input("Введите y2: "))
+
+
+diagonal_length = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+
+
+side_length = diagonal_length / math.sqrt(2)
+
+
+area = side_length**2
+
+
+perimeter = 4 * side_length
+
+
+print(f"Площадь квадрата: {area}")
+print(f"Периметр квадрата: {perimeter}")
