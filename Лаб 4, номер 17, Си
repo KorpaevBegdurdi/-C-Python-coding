@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int n; 
+    float m; 
+    float total_hours = 0; 
+
+    
+    printf("Введите количество сенокосилок (n): \n");
+    scanf("%d", &n);
+    printf("Введите время работы первой сенокосилки (m) в часах: \n");
+    scanf("%f", &m);
+
+    
+    for (int i = 0; i < n; i++) {
+        total_hours += m + (i * (10.0 / 60.0)); 
+    }
+
+    
+    printf("Общее время работы всей бригады: %.1f часов\n", total_hours);
+
+    return 0;
+}
