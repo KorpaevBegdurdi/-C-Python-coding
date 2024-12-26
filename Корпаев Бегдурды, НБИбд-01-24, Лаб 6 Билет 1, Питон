@@ -1,0 +1,13 @@
+k = float(input("Введите число k: "))
+n = int(input("Введите натуральный показатель n: "))
+
+if n < 1:
+    print("Показатель n должен быть натуральным числом (больше 0).")
+else:
+    result = 1
+
+    for _ in range(n):
+        result *= k  
+
+    
+    print(f"{k} в степени {n} равно {result}")
